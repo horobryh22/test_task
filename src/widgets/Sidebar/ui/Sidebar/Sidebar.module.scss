@@ -1,0 +1,10 @@
+.Sidebar {
+    padding: 25px 0 25px 32px;
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--navbar-height));
+    overflow-y: scroll;
+
+    .title {
+        margin-bottom: 32px;
+    }
+}

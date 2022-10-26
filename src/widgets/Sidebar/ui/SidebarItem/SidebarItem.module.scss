@@ -1,0 +1,36 @@
+.SidebarItem {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  transform: rotate(0deg);
+}
+
+.collapsed {
+  transform: rotate(180deg);
+}
+
+.item {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nested {
+  margin-left: 25px;
+
+  .icon {
+    margin-right: 16px;
+  }
+}

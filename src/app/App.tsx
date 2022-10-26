@@ -3,6 +3,7 @@ import React, { ReactElement, Suspense } from 'react';
 import { AppRouter } from 'app/providers/router';
 import { classNames } from 'shared/lib';
 import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
 
 const App = (): ReactElement => {
     return (
@@ -10,7 +11,7 @@ const App = (): ReactElement => {
             <Suspense fallback="">
                 <Navbar />
                 <div className="app-content">
-                    {/*<Sidebar />*/}
+                    <Sidebar />
                     <AppRouter />
                 </div>
             </Suspense>
