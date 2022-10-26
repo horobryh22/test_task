@@ -1,0 +1,31 @@
+.Navbar {
+  padding: 16px 32px;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    color: var(--text-color-white);
+    font-weight: 700;
+  }
+
+  .logo, .user {
+    display: flex;
+    align-items: center;
+
+    > svg {
+      margin-right: 24px;
+    }
+  }
+
+  .user {
+    > svg {
+      margin-right: 16px;
+    }
+  }
+
+}
+

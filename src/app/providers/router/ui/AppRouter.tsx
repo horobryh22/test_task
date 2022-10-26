@@ -1,5 +1,17 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, Suspense } from 'react';
+
+import { useRoutes } from 'react-router';
+
+import { routeConfig } from '../config/routeConfig';
+
+import { PageLoader } from 'widgets/PageLoader';
 
 export const AppRouter = (): ReactElement => {
-    return <div className="page-wrapper">Hello epta</div>;
+    const elements = useRoutes(routeConfig);
+
+    return (
+        <Suspense fallback={<PageLoader />}>
+            <div className="page-wrapper">{elements}</div>
+        </Suspense>
+    );
 };

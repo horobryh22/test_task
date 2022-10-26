@@ -1,17 +1,15 @@
 @import "./variables/global";
-@import "./themes/dark";
-@import "./themes/light";
 @import "./reset";
 
 body,
 .app {
   font: var(--font-m);
-  color: var(--primary-color);
+  font-weight: 600;
+  color: var(--text-color-black);
 }
 
 .app {
   min-height: 100vh;
-  background: var(--bg-color);
 }
 
 .app-content {
