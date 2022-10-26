@@ -1,4 +1,4 @@
-import React, { memo, ReactElement } from 'react';
+import React, { memo, ReactElement, useMemo } from 'react';
 
 import { SidebarItemList } from '../../model/items';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
@@ -12,13 +12,15 @@ interface SidebarProps {
 }
 
 export const Sidebar = memo(({ className }: SidebarProps): ReactElement => {
-    const mappedItems = SidebarItemList.map(item => (
-        <SidebarItem
-            key={item.pageName}
-            item={item}
-            multiline={item.pageName === 'Настройки'}
-        />
-    ));
+    const mappedItems = useMemo(() => {
+        return SidebarItemList.map(item => (
+            <SidebarItem
+                key={item.pageName}
+                item={item}
+                multiline={item.pageName === 'Настройки'}
+            />
+        ));
+    }, []);
 
     return (
         <div className={classNames(classes.Sidebar, {}, [className])}>

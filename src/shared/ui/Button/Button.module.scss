@@ -1,0 +1,20 @@
+.Button {
+  padding: 20px 40px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--text-color-white);
+  font: var(--font-l);
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.icon {
+  margin-right: 16px;
+}
+
+.disabled {
+  opacity: 0.5;
+}
