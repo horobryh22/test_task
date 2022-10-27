@@ -1,12 +1,16 @@
 import { ReactElement } from 'react';
 
-import SearchIcon from 'shared/assets/img/search.svg';
-import { Button } from 'shared/ui';
+import classes from './AddressPage.module.scss';
+
+import { Search } from 'features/FetchAddress';
+import { classNames } from 'shared/lib';
 
 const AddressPage = (): ReactElement => {
     return (
-        <div>
-            <Button Icon={SearchIcon}>Поиск</Button>
+        <div className={classNames(classes.AddressPage)}>
+            <span className={classes.title}>Поиск адресов</span>
+            <span className={classes.subtitle}>Введите интересующий вас адрес</span>
+            <Search />
         </div>
     );
 };

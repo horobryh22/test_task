@@ -1,0 +1,16 @@
+.AddressPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font: var(--font-l);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+

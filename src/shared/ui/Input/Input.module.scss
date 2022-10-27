@@ -1,0 +1,16 @@
+.Input {
+  width: 100%;
+  margin-right: 24px;
+
+  >input {
+    width: 100%;
+    padding: 23px;
+    background: transparent;
+    border: 3px solid  var(--primary-color);
+    border-radius: 10px;
+    height: 70px;
+    color: #6C6C6C;
+    font-weight: 500;
+  }
+
+}

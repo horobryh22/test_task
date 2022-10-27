@@ -21,32 +21,34 @@ export const SidebarItem = memo(
 
         const [collapsed, setCollapsed] = useState(true);
 
-        const mappedItems = SettingsItemList.map(item => (
-            <SidebarItem key={item.pageName} item={item} className={classes.nested} />
-        ));
-
         const mods: Mods = {
             [classes.collapsed]: collapsed,
         };
 
+        const toggleCollapsed = (): void => {
+            setCollapsed(!collapsed);
+        };
+
+        const mappedItems = SettingsItemList.map(item => (
+            <SidebarItem key={item.pageName} item={item} className={classes.nested} />
+        ));
+
         return (
-            <div
-                className={classNames(classes.SidebarItem, {}, [className])}
-                onClick={() => setCollapsed(!collapsed)}
-            >
-                <AppLink className={classes.item} to={to}>
-                    <div className={classes.icon}>
-                        <Icon />
-                    </div>
-                    <span>{pageName}</span>
-                </AppLink>
-                {multiline && (
-                    <>
-                        <Arrow className={classNames(classes.arrow, mods)} />
-                        {!collapsed && mappedItems}
-                    </>
-                )}
-            </div>
+            <>
+                <div
+                    className={classNames(classes.SidebarItem, {}, [className])}
+                    onClick={toggleCollapsed}
+                >
+                    <AppLink className={classes.item} to={to}>
+                        <div className={classes.icon}>
+                            <Icon />
+                        </div>
+                        <span>{pageName}</span>
+                    </AppLink>
+                    {multiline && <Arrow className={classNames(classes.arrow, mods)} />}
+                </div>
+                <div>{multiline && <>{!collapsed && mappedItems}</>}</div>
+            </>
         );
     },
 );

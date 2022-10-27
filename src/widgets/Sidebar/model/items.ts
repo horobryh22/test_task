@@ -3,9 +3,11 @@ import { SVGProps, VFC } from 'react';
 import { RoutePath } from 'app/providers/router/config/routeConfig';
 import AddressIcon from 'shared/assets/img/links/address.svg';
 import DateIcon from 'shared/assets/img/links/date.svg';
+import FinanceIcon from 'shared/assets/img/links/finance.svg';
 import LogoutIcon from 'shared/assets/img/links/logout.svg';
 import MainIcon from 'shared/assets/img/links/main.svg';
 import MapIcon from 'shared/assets/img/links/maps.svg';
+import ProfileSettingIcon from 'shared/assets/img/links/profileSettings.svg';
 import SettingIcon from 'shared/assets/img/links/settings.svg';
 import TableIcon from 'shared/assets/img/links/tables.svg';
 import WidgetIcon from 'shared/assets/img/links/widgets.svg';
@@ -28,6 +30,6 @@ export const SidebarItemList: SidebarItemType[] = [
 ];
 
 export const SettingsItemList: SidebarItemType[] = [
-    { to: '', Icon: MainIcon, pageName: 'Настройки профиля' },
-    { to: '', Icon: AddressIcon, pageName: 'Управление финансами' },
+    { to: '', Icon: ProfileSettingIcon, pageName: 'Настройки профиля' },
+    { to: '', Icon: FinanceIcon, pageName: 'Управление финансами' },
 ];
