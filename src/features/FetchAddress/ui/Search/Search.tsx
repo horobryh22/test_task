@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { memo, ReactElement, useState } from 'react';
 
 import { useAddress } from '../../model/hooks/useAddress/useAddress';
 import { ItemList } from '../ItemList/ItemList';
@@ -13,7 +13,7 @@ interface SearchProps {
     className?: string;
 }
 
-export const Search = ({ className }: SearchProps): ReactElement => {
+export const Search = memo(({ className }: SearchProps): ReactElement => {
     const [valueError, setValueError] = useState<null | string>(null);
     const [address, setAddress] = useState('');
     const { refetch, isError, data, isLoading, isFetched } = useAddress(address);
@@ -54,4 +54,4 @@ export const Search = ({ className }: SearchProps): ReactElement => {
             {dataSuccess && <ItemList items={data} />}
         </div>
     );
-};
+});

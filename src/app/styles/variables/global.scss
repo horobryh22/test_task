@@ -1,10 +1,8 @@
 :root {
     --font-family-main: 'Montserrat', sans-serif;
-
     --font-size-m: 20px;
     --font-line-m: 24px;
     --font-m: var(--font-size-m) / var(--font-line-m)  var(--font-family-main);
-
     --font-size-l: 26px;
     --font-line-l: 32px;
     --font-l: var(--font-size-l) / var(--font-line-l)  var(--font-family-main);
@@ -16,5 +14,5 @@
     // colors
     --primary-color: #4F27BF;
     --text-color-black: #1C1C1E;
-    --text-color-white: #FFFFFF;
+    --text-color-white: #FFF;
 }

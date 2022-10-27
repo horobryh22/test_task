@@ -1,7 +1,6 @@
 .MainPage {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     font-weight: 500;
 
     .title {
@@ -11,13 +10,13 @@
     }
 
     .subtitle {
-        font-weight: 500;
         font: var(--font-m);
+        font-weight: 500;
         margin-bottom: 24px;
     }
 
     >p {
-        width: 1080px;
+        width: 1050px;
         margin-bottom: 24px;
     }
 }

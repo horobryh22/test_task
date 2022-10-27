@@ -17,7 +17,8 @@ export default (env: BuildEnv): Configuration => {
 
     const MODE: BuildMode = env.mode || 'development';
     const IS_DEV = MODE === 'development';
-    const URL = env.apiUrl || 'http://localhost:8000';
+    const URL =
+        env.apiUrl || 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest';
 
     return buildWebpackConfig({
         port: PORT,

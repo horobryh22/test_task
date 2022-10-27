@@ -1,3 +1,8 @@
 import React from 'react';
 
-export const MainPageAsync = React.lazy(() => import('./MainPage'));
+// имитация подгрузки страницы при первой загрузке
+export const MainPageAsync = React.lazy(async () => {
+    return await new Promise(resolve => setTimeout(resolve, 1000)).then(
+        async () => await import('./MainPage'),
+    );
+});

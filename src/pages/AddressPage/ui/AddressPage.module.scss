@@ -1,7 +1,6 @@
 .AddressPage {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .title {
@@ -11,8 +10,8 @@
 }
 
 .subtitle {
+  font: var(--font-m);
   font-weight: 500;
   margin-bottom: 24px;
-  font: var(--font-m);
 }
 
