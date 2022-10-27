@@ -1,0 +1,23 @@
+.MainPage {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-weight: 500;
+
+    .title {
+        font: var(--font-l);
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .subtitle {
+        font-weight: 500;
+        font: var(--font-m);
+        margin-bottom: 24px;
+    }
+
+    >p {
+        width: 1080px;
+        margin-bottom: 24px;
+    }
+}

@@ -15,12 +15,10 @@ export const ItemList = ({ className, items }: ItemListProps): ReactElement => {
     const mappedItems = items.map((item, index) => {
         return (
             <li key={index + item.unrestricted_value} className={classes.item}>
-                {item.value}
+                <a href={`mailto:ask@someone.ru?subject=${item.value}`}>{item.value}</a>
             </li>
         );
     });
-
-    console.log({ itemslength: items.length, mappedItems });
 
     return (
         <div className={classNames(classes.ItemList, {}, [className])}>

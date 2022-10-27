@@ -8,8 +8,8 @@ import { classNames } from 'shared/lib';
 const AddressPage = (): ReactElement => {
     return (
         <div className={classNames(classes.AddressPage)}>
-            <span className={classes.title}>Поиск адресов</span>
-            <span className={classes.subtitle}>Введите интересующий вас адрес</span>
+            <h1 className={classes.title}>Поиск адресов</h1>
+            <h2 className={classes.subtitle}>Введите интересующий вас адрес</h2>
             <Search />
         </div>
     );

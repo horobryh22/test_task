@@ -1,4 +1,4 @@
-import React, { memo, ReactElement, useState } from 'react';
+import React, { memo, ReactElement, useState, MouseEvent } from 'react';
 
 import { SettingsItemList, SidebarItemType } from '../../model/items';
 
@@ -33,13 +33,19 @@ export const SidebarItem = memo(
             <SidebarItem key={item.pageName} item={item} className={classes.nested} />
         ));
 
+        const handleClick = (e: MouseEvent<HTMLAnchorElement>): void => {
+            if (!to) {
+                e.preventDefault();
+            }
+        };
+
         return (
             <>
                 <div
                     className={classNames(classes.SidebarItem, {}, [className])}
                     onClick={toggleCollapsed}
                 >
-                    <AppLink className={classes.item} to={to}>
+                    <AppLink className={classes.item} to={to} onClick={handleClick}>
                         <div className={classes.icon}>
                             <Icon />
                         </div>

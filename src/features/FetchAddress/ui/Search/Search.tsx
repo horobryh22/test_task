@@ -14,13 +14,20 @@ interface SearchProps {
 }
 
 export const Search = ({ className }: SearchProps): ReactElement => {
+    const [valueError, setValueError] = useState<null | string>(null);
     const [address, setAddress] = useState('');
     const { refetch, isError, data, isLoading, isFetched } = useAddress(address);
 
     const dataSuccess = isFetched && !isError && !isLoading;
 
     const handleClick = (): void => {
+        if (address.length < 3) {
+            setValueError('Минимальное количество символов 3');
+
+            return;
+        }
         refetch();
+        setValueError(null);
     };
 
     return (
@@ -35,6 +42,7 @@ export const Search = ({ className }: SearchProps): ReactElement => {
                     Поиск
                 </Button>
             </div>
+            {valueError && <h3 className={classes.error}>{valueError}</h3>}
             {isLoading && (
                 <div className={classes.loader}>
                     <Loader />

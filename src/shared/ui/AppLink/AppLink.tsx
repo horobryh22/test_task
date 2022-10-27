@@ -3,10 +3,9 @@ import { ReactElement } from 'react';
 import type { NavLinkProps } from 'react-router-dom';
 import { NavLink, useLocation } from 'react-router-dom';
 
-import classes from './AppLink.module.scss';
+import { classNames, Mods } from '../../lib/classNames/classNames';
 
-import { classNames } from 'shared/lib';
-import { Mods } from 'shared/lib/classNames/classNames';
+import classes from './AppLink.module.scss';
 
 interface AppLinkProps extends NavLinkProps {
     className?: string;
